@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="viewpayment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <nav  >
+        <div class="dashboard-nav">
+            <p>Dashboard</p>
+            <img src="images/crystals--carats-high-resolution-logo-transparent.png" width="220px" class="img-fluid">
+            <div class="admin">
+                <i class="fa-solid fa-user-tie"></i>
+                <span>Admin</span>
+            </div>
+
+            
+        </div>
+
+
+    </nav>
+
+    <div class="dashboard-sidebar">
+        <div class="row">
+            <div class="col-2">
+                <span> <a href="Dashboardd.html">Product</a></span>
+                <ul>
+                    <li> <a href="insertcategory.html">Categories</a></li>
+                    <li> <a href="Slider-image.html">Slider Images</a></li>
+                    <li> <a href="viewcustomer.html">View Customers</a></li>
+                    <li> <a href="vieworder.html">View Orders</a></li>
+                    <li> <a href="viewpayment.html">View Payments</a></li>
+
+                </ul>
+             </div>
+
+             <div class="col-10">
+                <div class="payment-box">
+                    Payment Method
+                </div>
+                <div class="row-check-boxes-section">
+                    <div class="check">
+                        <div>  <input type="checkbox" id="cod2">
+                            <label for="cod2">Cash On Delivery</label></div>
+                           <div>  <button class="blue">Active</button>
+                            <button class="white-blue">Inactive</button></div>
+                    </div>
+                    <div class="check">
+                       <div>  <input type="checkbox" id="cod2">
+                        <label for="cod2">Credit/Debit Card</label></div>
+                       <div>  <button class="blue">Active</button>
+                        <button class="white-blue">Inactive</button></div>
+                    </div>
+                    <div class="check">
+                        <div>  <input type="checkbox" id="cod2">
+                            <label for="cod2">Credit/Debit Card </label></div>
+                           <div>  <button class="blue">Active</button>
+                            <button class="white-blue">Inactive</button></div>
+                    </div>
+                </div>
+
+                <table class="customer-table">
+                    <thead>
+                        <tr>
+                            <th>Payment ID</th>
+                             <th>Inovoice Number</th>
+                            <th>Account Paid</th>
+                            <th>Payment Mode </th>
+                             <th>Txn number</th>
+                            <th>Payment
+                                Status</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4564</td>
+                              <td>INV-9784-565-323</td>
+                             <td>7500</td>
+                             <td>CASH</td>
+                             <td>65406754378</td>
+                            <td><button style="background-color: green; margin-bottom: 3px;">Delivered</button>  </td>
+                        </tr>
+                        <tr>
+                            <td>9564</td>
+                            <td>INV-9784-565-323</td>
+                           <td>7500</td>
+                           <td>CASH</td>
+                           <td>98706754378</td>
+                          <td><button style="background-color: red; margin-bottom: 3px;">pending</button>  </td>                        </tr>
+                        <tr>
+                            <td>6564</td>
+                            <td>INV-9784-565-323</td>
+                           <td>7500</td>
+                           <td>CASH</td>
+                           <td>5606754378</td>
+                          <td><button style="background-color: green; margin-bottom: 3px;">Delivered</button>  </td>                        </tr>
+                    </tbody>
+                </table>
+            
+
+
+
+
+
+
+            </div>
+        
+             
+        </div>
+    </div>
+    
+</body>
+</html>

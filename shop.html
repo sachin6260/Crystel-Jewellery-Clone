@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- navbar-section -->
+    <nav>
+        <div class="navbar">
+            <ul class="nav-links">
+                <li><a href="/Navbar.html">Home</a></li>
+                <li><a href="/shop.html">Shop</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/crystals--carats-high-resolution-logo-transparent.png" width="220px" class="img-fluid">
+             </div>
+            <ul class="logo-link">
+             <li><i class="fa-sharp fa-solid fa-heart"></i></li>
+             <li><i class="fa-sharp fa-solid fa-cart-shopping"></i></li>
+             <li>                                     <li><i class="fa-solid fa-user"></i></li>
+            </li>
+             </ul>
+        </div>
+    </nav>   
+
+    <!-- Popup for login -->
+    <div class="popup first-popup " id="login-popup">
+        <img src="images/login.jpg" alt="">
+
+        <div class="popup-content">
+            <button class="close-btn" onclick="hidePopup('login-popup')"><i class="fa-solid fa-xmark"></i></button>
+            <div class="welcome-pera">
+                <p>Thank you for visiting us. We're thrilled to have you here! Explore our collection of exquisite jewelry and enjoy exclusive offers. <br> <i class="fa-regular fa-face-smile"></i> Happy shopping!
+                </p>
+            </div>
+            <div class="aubtn">
+                <a href="javascript:void(0)" onclick="showPopup('signup-popup')">User Login</a>
+                <a href="">Admin Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Section -->
+    <div class="popup-section" id="signup-popup">
+        <img src="images/login.jpg" alt="">
+        <div class="popup-section-content">
+            <button class="close-btn" onclick="hidePopup('signup-popup')"><i class="fa-solid fa-xmark"></i></button>
+            <div class="sl-btn">
+                <a href="javascript:void(0)" onclick="showPopup('signup-popup')">Sign Up</a>
+                <a href="javascript:void(0)" onclick="showPopup('login-section')">Login</a>
+            </div>
+            <hr>
+            <p>Sign up & get Rs. 500 off* coupon code for your first purchase!</p>
+            <div class="input-group">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Email">
+                <button class="verify-btn">Verify</button>
+            </div>
+            <div class="input-group">
+                <input type="number" placeholder="Phone Number">
+                <button class="verify-btn">Verify</button>
+            </div>
+            <div class="input-group">
+                <input type="number" placeholder="Password">
+            </div>
+            <div class="input-group">
+                <input type="number" placeholder="Confirm Password">
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the Terms of use and Privacy Statement</label>
+            </div>
+            <button class="signup-btn">Sign Up</button>
+            <p>Already have an account? <a href="javascript:void(0)" onclick="showPopup('login-section')">Login now</a></p>
+        </div>
+        
+    </div>
+
+    <!-- Login Section -->
+    <div class="popup-section" id="login-section">
+        <img src="images/login.jpg" alt="">
+
+        <div class="popup-section-content">
+            <button class="close-btn" onclick="hidePopup('login-section')"><i class="fa-solid fa-xmark"></i></button>
+            <div class="sl-btn">
+                <a href="javascript:void(0)" onclick="showPopup('signup-popup')">Sign Up</a>
+                <a href="javascript:void(0)" onclick="showPopup('login-section')">Login</a>
+            </div>
+            <hr class="login-hr">
+            <div class="input-group login-input">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="input-group login-input">
+                <input type="text" placeholder="Password">
+            </div>
+            <a href="progileloged.html">            <button class="signup-btn">Log In</button>            </a>
+             <p><a href="javascript:void(0)" onclick="showPopup('forget-password-section')">Forgot Password?</a></p>
+              <button class="signup-btn"><i class="fa-brands fa-google"></i> Log in with Google</button>
+            <p>New User? <a href="javascript:void(0)" onclick="showPopup('signup-popup')">Sign up now</a></p>
+        </div>
+    </div>
+
+    <!-- Forget Password Section -->
+    <div class="popup-section" id="forget-password-section">
+        <img src="images/login.jpg" alt="">
+
+        <div class="popup-section-content">
+            <button class="close-btn" onclick="hidePopup('forget-password-section')"><i class="fa-solid fa-xmark"></i></button>
+            <h4><i class="fa-solid fa-lock"></i> Forgot Password?</h4>
+            <hr>
+            <p><i class="fa-regular fa-face-smile"></i> No worries, we’ll send you reset instructions.</p>
+            <div class="input-group login-input finput">
+                <input type="text" placeholder="Enter your email id or phone number">
+            </div>
+             <button class="signup-btn" onclick="showPopup('reset-password-section')">  Reset Password</button>
+            <p><a href="javascript:void(0)" onclick="showPopup('login-section')"><i class="fa-solid fa-arrow-left"></i> Back to Login</a></p>
+        </div>
+    </div>
+
+    <!-- Reset Password Section -->
+    <div class="popup-section" id="reset-password-section">
+        <img src="images/login.jpg" alt="">
+
+        <div class="popup-section-content">
+            <button class="close-btn" onclick="hidePopup('reset-password-section')"><i class="fa-solid fa-xmark"></i></button>
+            <h4><i class="fa-solid fa-key"></i> Reset Password</h4>
+            <hr>
+            <p>Must be at least 8 characters.</p>
+            <div class="input-group login-input finput">
+                <input type="text" placeholder="New Password ">
+            </div>
+            <div class="input-group login-input finput">
+                <input type="number" placeholder="Confirm New Password">
+            </div>
+             <button class="signup-btn" onclick="showPopup('enter-otp-section')">Continue</button>
+            <p>Didn’t receive email? <a href="javascript:void(0)">Click to resend</a></p>
+            <p><a href="javascript:void(0)" onclick="showPopup('login-section')">Back to Login</a></p>
+        </div>
+    </div>
+
+    <!-- Enter OTP Section -->
+    <div class="popup-section" id="enter-otp-section">
+        <img src="images/login.jpg" alt="">
+
+        <div class="popup-section-content">
+            <button class="close-btn" onclick="hidePopup('enter-otp-section')"><i class="fa-solid fa-xmark"></i></button>
+            <h4><i class="fa-solid fa-mobile"></i> Enter OTP</h4>
+            <hr>
+            <div class="otp-input">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+            </div>
+            <div>
+                <button class="signup-btn">Continue</button>
+
+            </div>
+             <p>Didn’t receive email? <a href="javascript:void(0)">Click to resend</a></p>
+            <p><a href="javascript:void(0)" onclick="showPopup('login-section')">Back to Login</a></p>
+        </div>
+    </div>
+
+
+    <!-- carousel-section -->
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/2X.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/1428f01e767cab74cdffb42837e417f0.jpg" class="d-block w-100" alt="...">
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+
+            <!-- categories section -->
+
+            <div class="category-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-2 sidebar">
+                            <h3>Category</h3>
+                            <br>
+                            <h4>Crystal</h4>
+                            <ul>
+                                <li><a href="/shop.html">Gemstone</a></li>
+                                <li><a href="shop.html">Diamond</a></li>
+                            </ul>
+                            <h4>Carats</h4>
+                            <ul>
+                                <li><a href="shop.html">Gold</a></li>
+                                <li><a href="shop.html">Platinum</a></li>
+                            </ul>
+                            <a href="/product.html"><h4>Products</h4></a>
+                             <ul>
+                                <li><a href="/product.html">Coin</a></li>
+                                <li><a href="/product.html">Biscuit</a></li>
+                                <li><a href="/product2.html">Necklace</a></li>
+                                <li><a href="/product2.html">Bracelet</a></li>
+                                <li><a href="/product2.html">Bangles</a></li>
+                                 <li><a href="/product3.html">Earrings</a></li>
+                                <li><a href="/product3.html">Pendant</a></li>
+                                <li><a href="product3.html">Ring</a></li>
+                                <li><a href="product4.html">Mangalsutra</a></li>
+                                <li><a href="product4.html">Nosepin</a></li>
+                            </ul>
+                            <a href="/bridal.html"><h4>Bridal Spacial</h4></a>
+                            <ul>
+                                <li><a href="explorebridal.html">Enchanting</a></li>
+                                <li><a href="explorebridal.html">Trendsetter</a></li>
+                                <li><a href="explorebridal.html">Dazzling</a></li>
+                                <li><a href="explorebridal.html">Elegant</a></li>
+                            </ul>
+                            <a href="/Ocasnioal.html"><h4>Occasional</h4></a>
+                            <ul>
+                                <li><a href="Ocasnioal.html">Birthday</a></li>
+                                <li><a href="Ocasnioal.html">Anniversary</a></li>
+                                <li><a href="Ocasnioal.html">Baby Birth</a></li>
+                                <li><a href="Ocasnioal.html">Festive Gifts</a></li>
+                            </ul>
+                            <h4>Personalised</h4>
+                            <ul>
+                                <li><a href="#">Jewellery Box</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-10 products-part">
+                            <div class="crystal-head">
+                                <h3>Crystal</h3>
+                            </div>
+                            <p class="breadcrumb">Shop > Crystals > Gemstone</p>
+                            <div class="row gemstone-imgs">
+                                <div class="col-md-4">
+                                    <div class="product-item">
+                                        <img src="images/g1.png" class="img-fluid" alt="">
+                                        <span>Ring</span>
+                                         <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="product-item">
+                                        <img src="images/g2.png" class="img-fluid" alt="">
+                                        <span>Earrings</span>
+                                        <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="product-item">
+                                        <img src="images/g3.png" class="img-fluid" alt="">
+                                        <span>Bracelet</span>
+                                        <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="product-item">
+                                        <img src="images/g4.png" class="img-fluid" alt="">
+                                        <span>Pendant</span>
+                                        <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="product-item">
+                                        <img src="images/b5.webp" class="img-fluid" alt="">
+                                        <span>Bangles</span>
+                                        <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="product-item">
+                                        <img src="images/g6.png" class="img-fluid" alt="">
+                                        <span>Necklace</span>
+                                        <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                    </div>
+                                </div>
+                             </div>
+                             <p class="breadcrumb">Shop> Crystals> Diamond</p>
+                             <div class="row gemstone-imgs">
+
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/d1.png" class="img-fluid" alt="">
+                                    <span>Ring</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+        
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/d2.png" class="img-fluid" alt="">
+                                    <span>Earrings</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/d3.png" class="img-fluid" alt="">
+                                    <span>Bracelet</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/d4.png" class="img-fluid" alt="">
+                                    <span>Pendant</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/d5.png" class="img-fluid" alt="">
+                                    <span>Bangles</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/d6.png" class="img-fluid" alt="">
+                                    <span>Necklace</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                             </div>
+                             <div class="crystal-head">
+                                <h3>CARATS</h3>
+                            </div>
+
+                             <p class="breadcrumb">Shop> Carats> Gold</p>
+                             <div class="row gemstone-imgs">
+
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/g1.png" class="img-fluid" alt="">
+                                    <span>Necklace</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+        
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/g2.png" class="img-fluid" alt="">
+                                    <span>Ring</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/g3.png" class="img-fluid" alt="">
+                                    <span>Earrings</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/g4.png" class="img-fluid" alt="">
+                                    <span>Bracelet</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/g5.png" class="img-fluid" alt="">
+                                    <span>Pendant</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-item">
+                                    <img src="images/g6.png" class="img-fluid" alt="">
+                                    <span>Bangles</span>
+                                    <a href="productcomponent.html"><div class="img-content">
+                                        <h5>Rs. 2500</h5>
+                                        <p>50% off</p>
+                                    </div></a>
+                                </div>
+                            </div>
+
+
+                             </div>
+                             <p class="breadcrumb">Shop > Crystals > Platinum</p>
+                             <div class="row gemstone-imgs">
+                                 <div class="col-md-4">
+                                     <div class="product-item">
+                                         <img src="images/p1.png" class="img-fluid" alt="">
+                                         <span>Necklace</span>
+                                         <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                     <div class="product-item">
+                                         <img src="images/p2.png" class="img-fluid" alt="">
+                                         <span>Earrings</span>
+                                         <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                     <div class="product-item">
+                                         <img src="images/p3.png" class="img-fluid" alt="">
+                                         <span>Bracelet</span>
+                                         <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                     <div class="product-item">
+                                         <img src="images/p4.png" class="img-fluid" alt="">
+                                         <span>Pendant</span>
+                                         <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                     <div class="product-item">
+                                         <img src="images/p5.png" class="img-fluid" alt="">
+                                         <span>Bangles</span>
+                                         <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                     <div class="product-item">
+                                         <img src="images/p6.png" class="img-fluid" alt="">
+                                         <span>Necklace</span>
+                                         <a href="productcomponent.html"><div class="img-content">
+                                            <h5>Rs. 2500</h5>
+                                            <p>50% off</p>
+                                        </div></a>
+                                     </div>
+                                 </div>
+                              </div>
+ 
+
+        
+                        </div>
+        
+                        </div>
+                        
+                    </div>
+                     
+               
+                        </div>
+        
+                 
+        <!-- footer section -->
+        <div class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-content "> 
+                    <div class="col-3 footer-item">
+                        <h4>Address</h4>
+                        <p>SO-15, 3rd floor, Magneto Offizo, Jivan Vihar, Labhandih, Raipur, Chhattisgarh 492001</p>
+                        <h4>Location</h4>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.276101751682!2d144.95592851531857!3d-37.81720997975198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5770b2ec1a01716!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1597205848827!5m2!1sen!2sau" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-3 footer-item text-center">
+                        <h4>Help & Info</h4>
+                        <ul>
+                            <li><a href="About.html">About</a></li>
+                            <li><a href="career.html">Career</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3 footer-item text-center">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-phone"></i> 1809-908-5647</li>
+                            <li><i class="fa-solid fa-envelope"></i> get in touch</li>
+                            <li><i class="fa-brands fa-rocketchat"></i> chat with us</li>
+                        </ul>
+                    </div>
+                    <div class="col-3 footer-item text-center">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Payment Issues</a></li>
+                            <li><a href="#">Net Banking</a></li>
+                            <li><a href="#">Custom Jewellery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="row follow-us">
+                    <div class="col-12">
+                        <h4>Follow Us On:</h4>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-section">
+            <p>@2024 Company Name Pvt Ltd. All Rights Reserved.</p>
+        </div>
+        
+    
+        <script>
+                 function showPopup(id) {
+            hideAllPopups();
+            document.getElementById(id).style.display = 'flex';
+        }
+
+        function hidePopup(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        function hideAllPopups() {
+            document.querySelectorAll('.popup, .popup-section').forEach(popup => {
+                popup.style.display = 'none';
+            });
+        }
+
+        // Show login popup automatically after 3 seconds
+        window.onload = function() {
+            setTimeout(() => {
+                showPopup('login-popup');
+            }, 3000);
+        };
+        </script>
+     </body>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</html>

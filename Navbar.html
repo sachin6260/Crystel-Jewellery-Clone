@@ -1,0 +1,512 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystel</title>
+    <link rel="stylesheet" href="Navbar.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ </head>
+ <body>
+       <!-- navbar-section -->
+       <nav>
+        <div class="navbar">
+            <ul class="nav-links">
+                <li><a href="/Navbar.html">Home</a></li>
+                <li><a href="/shop.html">Shop</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/crystals--carats-high-resolution-logo-transparent.png" width="220px" class="img-fluid">
+             </div>
+            <ul class="logo-link">
+             <li><i class="fa-sharp fa-solid fa-heart"></i></li>
+             <li><i class="fa-sharp fa-solid fa-cart-shopping"></i></li>
+             <li><a href="javascript:void(0)" id="login-btn" onclick="showPopup('login-popup')">Login</a></li>
+            </ul>
+        </div>
+    </nav>   
+    <!-- Popup for login -->
+    <div class="popup first-popup " id="login-popup">
+        <img src="images/login.jpg" alt="">
+
+        <div class="popup-content">
+            <button class="close-btn" onclick="hidePopup('login-popup')"><i class="fa-solid fa-xmark"></i></button>
+            <div class="welcome-pera">
+                <p>Thank you for visiting us. We're thrilled to have you here! Explore our collection of exquisite jewelry and enjoy exclusive offers. <br> <i class="fa-regular fa-face-smile"></i> Happy shopping!
+                </p>
+            </div>
+            <div class="aubtn">
+                <a href="javascript:void(0)" onclick="showPopup('signup-popup')">User Login</a>
+                <a href="javascript:void(0)" onclick="showPopup('Admin-signup-popup')">Admin Login</a>
+
+             </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Section -->
+    <div class="popup-section" id="signup-popup">
+        <img src="images/login.jpg" alt="">
+        <div class="popup-section-content">
+            <button class="close-btn" onclick="hidePopup('signup-popup')"><i class="fa-solid fa-xmark"></i></button>
+            <div class="sl-btn">
+                <a href="javascript:void(0)" onclick="showPopup('signup-popup')">Sign Up</a>
+                <a href="javascript:void(0)" onclick="showPopup('login-section')">Login</a>
+            </div>
+            <hr>
+            <p>Sign up & get Rs. 500 off* coupon code for your first purchase!</p>
+            <div class="input-group">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Email">
+                <button class="verify-btn">Verify</button>
+            </div>
+            <div class="input-group">
+                <input type="number" placeholder="Phone Number">
+                <button class="verify-btn">Verify</button>
+            </div>
+            <div class="input-group">
+                <input type="number" placeholder="Password">
+            </div>
+            <div class="input-group">
+                <input type="number" placeholder="Confirm Password">
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the Terms of use and Privacy Statement</label>
+            </div>
+            <button class="signup-btn">Sign Up</button>
+            <p>Already have an account? <a href="javascript:void(0)" onclick="showPopup('login-section')">Login now</a></p>
+        </div>
+        
+    </div>
+
+    <!-- Login Section -->
+    <div class="popup-section" id="login-section">
+        <img src="images/login.jpg" alt="">
+
+        <div class="popup-section-content">
+            <button class="close-btn" onclick="hidePopup('login-section')"><i class="fa-solid fa-xmark"></i></button>
+            <div class="sl-btn">
+                <a href="javascript:void(0)" onclick="showPopup('signup-popup')">Sign Up</a>
+                <a href="javascript:void(0)" onclick="showPopup('login-section')">Login</a>
+            </div>
+            <hr class="login-hr">
+            <div class="input-group login-input">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="input-group login-input">
+                <input type="text" placeholder="Password">
+            </div>
+            <a href="progileloged.html"><button  class="signup-btn">Log In</button>            </a>
+             <p><a href="javascript:void(0)" onclick="showPopup('forget-password-section')">Forgot Password?</a></p>
+              <button class="signup-btn"><i class="fa-brands fa-google"></i> Log in with Google</button>
+            <p>New User? <a href="javascript:void(0)" onclick="showPopup('signup-popup')">Sign up now</a></p>
+        </div>
+    </div>
+
+    <!-- Forget Password Section -->
+    <div class="popup-section" id="forget-password-section">
+        <img src="images/login.jpg" alt="">
+
+        <div class="popup-section-content">
+            <button class="close-btn" onclick="hidePopup('forget-password-section')"><i class="fa-solid fa-xmark"></i></button>
+            <h4><i class="fa-solid fa-lock"></i> Forgot Password?</h4>
+            <hr>
+            <p><i class="fa-regular fa-face-smile"></i> No worries, we’ll send you reset instructions.</p>
+            <div class="input-group login-input finput">
+                <input type="text" placeholder="Enter your email id or phone number">
+            </div>
+             <button class="signup-btn" onclick="showPopup('reset-password-section')">  Reset Password</button>
+            <p><a href="javascript:void(0)" onclick="showPopup('login-section')"><i class="fa-solid fa-arrow-left"></i> Back to Login</a></p>
+        </div>
+    </div>
+
+    <!-- Reset Password Section -->
+    <div class="popup-section" id="reset-password-section">
+        <img src="images/login.jpg" alt="">
+
+        <div class="popup-section-content">
+            <button class="close-btn" onclick="hidePopup('reset-password-section')"><i class="fa-solid fa-xmark"></i></button>
+            <h4><i class="fa-solid fa-key"></i> Reset Password</h4>
+            <hr>
+            <p>Must be at least 8 characters.</p>
+            <div class="input-group login-input finput">
+                <input type="text" placeholder="New Password ">
+            </div>
+            <div class="input-group login-input finput">
+                <input type="number" placeholder="Confirm New Password">
+            </div>
+             <button class="signup-btn" onclick="showPopup('enter-otp-section')">Continue</button>
+            <p>Didn’t receive email? <a href="javascript:void(0)">Click to resend</a></p>
+            <p><a href="javascript:void(0)" onclick="showPopup('login-section')">Back to Login</a></p>
+        </div>
+    </div>
+
+    <!-- Enter OTP Section -->
+    <div class="popup-section" id="enter-otp-section">
+        <img src="images/login.jpg" alt="">
+
+        <div class="popup-section-content">
+            <button class="close-btn" onclick="hidePopup('enter-otp-section')"><i class="fa-solid fa-xmark"></i></button>
+            <h4><i class="fa-solid fa-mobile"></i> Enter OTP</h4>
+            <hr>
+            <div class="otp-input">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+            </div>
+            <div>
+                <button class="signup-btn">Continue</button>
+
+            </div>
+             <p>Didn’t receive email? <a href="javascript:void(0)">Click to resend</a></p>
+            <p><a href="javascript:void(0)" onclick="showPopup('login-section')">Back to Login</a></p>
+        </div>
+    </div>
+
+
+    <!-- Admin-singnup-login -->
+     <!-- Admin sign up -->
+     <div class="popup-section" id="Admin-signup-popup">
+        <img src="images/admin-img.jpg" alt="">
+        <div class="popup-section-content">
+            <button class="close-btn" onclick="hidePopup('Admin-signup-popup')"><i class="fa-solid fa-xmark"></i></button>
+            <div class="sl-btn">
+                <a href="javascript:void(0)" onclick="showPopup('Admin-signup-popup')">Admin Sign Up</a>
+                <a href="javascript:void(0)" onclick="showPopup('Admin-login-section')">Admin Login</a>
+            </div>
+            <hr>
+            <p>Sign up & get Rs. 500 off* coupon code for your first purchase!</p>
+            <div class="input-group">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Email">
+                <button class="verify-btn">Verify</button>
+            </div>
+            <div class="input-group">
+                <input type="number" placeholder="Phone Number">
+                <button class="verify-btn">Verify</button>
+            </div>
+            <div class="input-group">
+                <input type="number" placeholder="Password">
+            </div>
+            <div class="input-group">
+                <input type="number" placeholder="Confirm Password">
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the Terms of use and Privacy Statement</label>
+            </div>
+            <button class="signup-btn">Admin Sign Up</button>
+            <p>Already have an account? <a href="javascript:void(0)" onclick="showPopup('Admin-login-section')">Login now</a></p>
+        </div>
+        
+    </div>
+
+        <!-- Login Section -->
+        <div class="popup-section" id="Admin-login-section">
+            <img src="images/admin-img.jpg" alt="">
+    
+            <div class="popup-section-content">
+                <button class="close-btn" onclick="hidePopup('login-section')"><i class="fa-solid fa-xmark"></i></button>
+                <div class="sl-btn">
+                    <a href="javascript:void(0)" onclick="showPopup('Admin-signup-popup')">Admin Sign Up</a>
+                    <a href="javascript:void(0)" onclick="showPopup('Admin-login-section')">Admin Login</a>
+                </div>
+                <hr class="login-hr">
+                <div class="input-group login-input">
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="input-group login-input">
+                    <input type="text" placeholder="Password">
+                </div>
+                <a href="Dashboardd.html"><button  class="signup-btn">Admin Log In</button>            </a>
+                 <p><a href="javascript:void(0)" onclick="showPopup('forget-password-section')">Forgot Password?</a></p>
+                  <button class="signup-btn"><i class="fa-brands fa-google"></i> Log in with Google</button>
+                <p>New User? <a href="javascript:void(0)" onclick="showPopup('Admin-signup-popup')">Sign up now</a></p>
+            </div>
+        </div>
+    
+    
+
+    <!-- hero-section -->
+    <div class="hero-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hero-item">
+                    <div class="col-6 hero-part1">
+                     <img src="/images/ardy-arjun-FApOxeT2NEQ-unsplash.jpg" alt="" class="img-fluid" >
+                    </div>
+                    <div class="col-6 hero-part2">
+                        <img src="/images/1a050904a125b3a6bb222c13a2be4103.jpg" alt=""  class="img-fluid" >
+                        <img src="/images/sabrianna-Y_bxfTa_iUA-unsplash.jpg" alt=""  class="img-fluid">
+                 </div>
+                 
+            </div>
+             
+        </div>
+
+    </div>
+    </div>
+
+    <!-- brows-category -->
+    <div class="brows-category">
+       <h1>Browse By Category</h1>
+       <p>Discover elegance at your fingertips</p>
+     </div>
+
+
+     <!-- brows category produt -->
+     <div class="brows-product">
+        <div class="container">
+            <div class="row">
+                <div class="brows-imgs">
+                    <div class="col-3">
+                        <img src="images/e7fdeb3197b20033737b4a6edde1f94d.jpg" alt="" class="img-fluid">
+                        <span>GEMSTONE</span>
+                    </div>
+                    <div class="col-3">
+                        <img src="images/diamond-1199183_640.jpg" alt="" class="img-fluid">
+                        <span>DIAMOND</span>
+                    </div>
+                    <div class="col-3">
+                        <img src="images/gold-296115_640.jpg" alt="" class="img-fluid">
+                        <span>GOLD</span>
+                    </div>
+                    <div class="col-3">
+                        <img src="images/eb5408996698923f1a86c2812de6e22a.jpg" alt="" class="img-fluid">
+                        <span>PLATINUM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- best-sellers-section -->
+    <div class="best-seller-section">
+        <div class="seller-head">
+            <h1>Best Sellers</h1>
+            <p>timeless elegence meets contempory style </p>
+            <img src="images/Line-Design.svg" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="images/coin1.jpg" class="img-fluid" alt="">
+                    <p>Coins</p>
+
+                </div>
+                <div class="col-3">
+                    <img src="images/new-earrings.jpg"class="img-fluid" alt="">
+                    <p>Ear Rings</p>
+
+                </div><div class="col-3">
+                    <img src="images/bracelet.jpg"class="img-fluid" alt="">
+                    <p>Bracelet</p>
+
+                </div><div class="col-3">
+                    <img src="images/new-bangles.webp"class="img-fluid" alt="">
+                    <p>Bangles</p>
+
+                </div>
+                <div class="col-3">
+                    <img src="images/new-necklace.webp"class="img-fluid" alt="">
+                    <p>Necklace</p>
+
+                </div><div class="col-3">
+                    <img src="images/new-nose-pins.webp" class="img-fluid" alt="">
+                    <p>Nose Pins</p>
+
+                </div><div class="col-3">
+                    <img src="images/new-finger-rings.webp" class="img-fluid" alt="">
+                    <p>Rings</p>
+
+                </div><div class="col-3">
+                    <img src="images/new-pendant-sets.jpg" class="img-fluid" alt="">
+                    <p>Pendent</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bridal section  -->
+    <div class="bridal-section">
+        <div class="bridal-head">
+            <h1>Bridal Jewellery Special</h1>
+            <p>be the bride you always dream it</p>
+            <img src="images/Line-Design.svg" alt="">
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="bidal-img">
+                    <div class="col-4 bridal-div">
+                        <img src="images/8_Mararashtrian.png" alt="">
+                        <span>Enchanting</span>
+                    </div>
+                    <div class="col-4 bridal-div">
+                        <img src="images/12_gujarati.png" alt="">
+                        <span>Trendsetter</span>
+                    </div>
+                    <div class="col-4  bridal-div">
+                        <img src="images/show-stopper.png" alt="">
+                        <span>Dazzling</span>
+
+                      </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- gc3 background -->
+    <div class="gc3-bg">
+        <img src="images/gc3.jpg" class="img-fluid" alt="">
+    </div>
+
+    <!-- shop by gender -->
+    <div class="gender-section">
+        <div class="gender-head">
+            <h1>Shop By Gender</h1>
+            <p>First-class jewelry for first-class Men, Women & Children.</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="gender-img">
+                    <div class="col-4">
+                       <img src="images/men.jpg" alt="">
+                       <span>men</span>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/women.webp" alt="">
+                        <span>women</span>
+                     </div> <div class="col-4">
+                        <img src="images/kids.png" alt="">
+                        <span>kids</span>
+                     </div>
+
+                </div>
+               
+            </div>
+        </div>
+    </div>
+     <!-- gc3 background -->
+     <div class="video-container" style="height: 550px;">
+        <video  autoplay muted loop>
+            <source src="images/istockphoto-1759662225-640_adpp_is.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    <!-- Recomundation-section -->
+    <div class="recomand-section">
+        <div class="recomand-head">
+            <h1>Recommendation For You</h1>
+            <p>style meets the pulse of fashion</p>
+            <img src="images/Line-Design.svg" alt="">
+        </div>
+        <div class="container">
+            <div class="row recomend-row">
+                <div class="col-6">
+                    <div class="equal-height">
+                        <img src="images/Birthday.jpg" class="img-fluid" alt="">
+                        <img src="images/anniversary.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                 <div class="col-6">
+                    <div class="equal-height">
+                        <img src="images/Personalized.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section -->
+    <div class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="footer-content "> 
+                <div class="col-3 footer-item">
+                    <h4>Address</h4>
+                    <p>SO-15, 3rd floor, Magneto Offizo, Jivan Vihar, Labhandih, Raipur, Chhattisgarh 492001</p>
+                    <h4>Location</h4>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.276101751682!2d144.95592851531857!3d-37.81720997975198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5770b2ec1a01716!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1597205848827!5m2!1sen!2sau" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+                <div class="col-3 footer-item text-center">
+                    <h4>Help & Info</h4>
+                    <ul>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 footer-item text-center">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-phone"></i> 1809-908-5647</li>
+                        <li><i class="fa-solid fa-envelope"></i> get in touch</li>
+                        <li><i class="fa-brands fa-rocketchat"></i> chat with us</li>
+                    </ul>
+                </div>
+                <div class="col-3 footer-item text-center">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Payment Issues</a></li>
+                        <li><a href="#">Net Banking</a></li>
+                        <li><a href="#">Custom Jewellery</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="row follow-us">
+                <div class="col-12">
+                    <h4>Follow Us On:</h4>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-section">
+        <p>@2024 Company Name Pvt Ltd. All Rights Reserved.</p>
+    </div>
+    
+    <script>
+        function showPopup(id) {
+   hideAllPopups();
+   document.getElementById(id).style.display = 'flex';
+}
+
+function hidePopup(id) {
+   document.getElementById(id).style.display = 'none';
+}
+
+function hideAllPopups() {
+   document.querySelectorAll('.popup, .popup-section').forEach(popup => {
+       popup.style.display = 'none';
+   });
+}
+
+// Show login popup automatically after 3 seconds
+window.onload = function() {
+   setTimeout(() => {
+       showPopup('login-popup');
+   }, 3000);
+};
+</script>
+ </body>
+ </html>

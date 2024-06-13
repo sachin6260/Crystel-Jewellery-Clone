@@ -1,0 +1,212 @@
+.dashboard-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: rgba(254, 215, 186, 1);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.dashboard-nav p {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.dashboard-nav img {
+    max-width: 220px;
+    height: auto;
+}
+
+.dashboard-nav .admin {
+    display: flex;
+    align-items: center;
+    background-color: rgba(139, 0, 0, 1);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dashboard-nav .admin i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.dashboard-nav .admin span {
+    font-size: 18px;
+}
+
+.dashboard-nav .admin:hover {
+    background-color: rgba(139, 0, 0, 1);
+}
+/* Sidebar container */
+.dashboard-sidebar {
+    
+     border-right: 1px solid #dee2e6;
+}
+.col-2{
+    background-color: #fff;
+     box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+      height: 750px;
+}
+
+/* Sidebar row */
+.dashboard-sidebar .row {
+    margin: 0;
+}
+
+/* Sidebar column */
+.dashboard-sidebar .col-2 {
+    padding: 0;
+}
+
+/* Sidebar section title */
+.dashboard-sidebar span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+/* Sidebar list */
+.dashboard-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Sidebar list items */
+.dashboard-sidebar ul li {
+    margin-bottom: 10px;
+}
+.dashboard-sidebar span a{
+    text-decoration: none;
+    color: rgba(139, 0, 0, 1) ;
+}
+
+/* Sidebar links */
+.dashboard-sidebar ul li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+    color:  rgba(139, 0, 0, 1);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+ }
+
+.dashboard-sidebar ul li a:hover {
+    background-color: #e07575;
+    color: #ffffff;
+}
+
+
+.col-10 {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.payment-box {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    background-color: rgba(210, 127, 127, 1)
+    ;
+    padding: 10px;
+    border-radius: 5px;
+     width: 260px;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+ 
+
+.check {
+    display: flex;
+     gap: 220px;
+    padding: 10px;
+     background-color: #fff;
+ 
+}
+
+.check input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+ 
+
+.check button {
+    padding: 5px 10px;
+    border: none;
+     cursor: pointer;
+}
+
+.check .blue {
+    background-color: #007bff;
+    color: white;
+}
+
+.check .blue:hover {
+    background-color: #0056b3;
+}
+
+.check .white-blue {
+    background-color: #f4f4f4;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.check .white-blue:hover {
+    background-color: #e0e0e0;
+}
+
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.customer-table th,
+.customer-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.customer-table th {
+    background-color: #f4f4f4;
+}
+
+.customer-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.customer-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.customer-table button {
+    background-color:  #e07575;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.customer-table button:hover {
+    background-color:rgba(139, 0, 0, 1);
+}
+ 
+ 
